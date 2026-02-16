@@ -24,12 +24,17 @@
 
 --1.DEPARTMENT:
 
-SELECT department,
+SELECT 
+    department,
 	attrition,
 	COUNT(employee_count) AS emp
-FROM attrition_hr_data
-GROUP BY department, attrition
-ORDER BY department;
+FROM 
+    attrition_hr_data
+GROUP BY 
+    department, 
+    attrition
+ORDER BY 
+    department;
 
 --2.SHIFT TYPE:
 
@@ -41,36 +46,59 @@ SELECT
 	END AS shift_type,
 	attrition,
 	COUNT(employee_count) AS emp
-FROM attrition_hr_data
-GROUP BY shift_type, attrition
-ORDER BY shift_type DESC, attrition;
+FROM
+    attrition_hr_data
+GROUP BY 
+    shift_type, 
+    attrition
+ORDER BY 
+    shift_type DESC, 
+    attrition;
 
 
 --3.BUSINESS TRAVEL:
 
-SELECT business_travel,
+SELECT 
+    business_travel,
 	attrition,
 	COUNT(employee_count) AS emp
-FROM attrition_hr_data
-GROUP BY business_travel, attrition
-ORDER BY  business_travel,attrition;
+FROM 
+    attrition_hr_data
+GROUP BY 
+    business_travel, 
+    attrition
+ORDER BY  
+    business_travel,
+    attrition;
 
 
 --4.JOB LEVEL:
 
-SELECT job_level,
+SELECT 
+    job_level,
 	attrition,
 	COUNT(employee_count) AS emp
-FROM attrition_hr_data
-GROUP BY job_level, attrition
-ORDER BY  job_level,attrition;
+FROM 
+    attrition_hr_data
+GROUP BY 
+    job_level, 
+    attrition
+ORDER BY  
+    job_level,
+    attrition;
 
 --5.JOB ROLE:
 
-SELECT job_role,
+SELECT 
+    job_role,
 	attrition,
 	COUNT(employee_count) AS emp
-FROM attrition_hr_data
-GROUP BY job_role, attrition
-ORDER BY  job_role,attrition;
+FROM 
+    attrition_hr_data
+GROUP BY 
+    job_role, 
+    attrition
+ORDER BY  
+    job_role,
+    attrition;
 
